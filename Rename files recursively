@@ -1,0 +1,12 @@
+# Rename files recursively 
+# $files2change
+# $searchPattern
+# $replacementString
+
+$files2change='Undetermined_*'
+$searchPattern='Undetermined'
+$replacementString='SC-3_isi_run_03'
+
+find . -name $files2change | sed -e "p;s/searchPattern/replacementString/" | xargs -n2 mv
+
+#find . -name 'Undetermined_*' | sed -e "p;s/Undetermined/SC-3_isi_run_03/" | xargs -n2 mv
