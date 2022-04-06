@@ -1,4 +1,4 @@
-# Find missing files in two lists of filenames
+# Compare two lists of file names and find the differences between them
 # ${fullname[12]} - lists of file names with paths
 
 diff <(cat ${fullname1} | rev | cut -d"/" -f1 | rev) <(cat ${fullname2} | rev | cut -d"/" -f1 | rev)
