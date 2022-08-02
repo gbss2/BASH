@@ -1,0 +1,6 @@
+# Copy and rename files inside quant subfolders
+
+for file in $1/*.quant/*.sf
+do
+        cp ${file} $(echo ${file} | sed 's/\([[:alnum:]]*\).quant\/quant\(.sf\)/\1\2/')
+done
