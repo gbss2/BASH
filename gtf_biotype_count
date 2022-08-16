@@ -1,0 +1,3 @@
+# Count GTF Biotypes
+
+cat <file>.gtf | perl -ne '/.*gene_biotype "(\w*)";.*/ && print $1, "\n"' | sort | uniq -c
