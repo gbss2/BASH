@@ -1,0 +1,6 @@
+# Create symbolic links from a given suffix
+
+find <folder> -type <f> -name <*.ext> -exec ln -s {} . ';'
+
+# Eg.
+# find data/ -type f -name "*.fastq.gz" -exec ln -s {} . ';'
